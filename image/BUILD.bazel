@@ -1,0 +1,5 @@
+filegroup(
+    name = "image",
+    srcs = ["image1.jpeg","image2.jpeg","1image.png","2image.png"],
+    visibility = ["//visibility:public"],  # Make it accessible by other targets
+)

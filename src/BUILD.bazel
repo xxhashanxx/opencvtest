@@ -1,0 +1,19 @@
+cc_binary(
+    name = "camera_motion",
+    srcs = ["main.cpp"],
+    copts = [
+        "-I/usr/include/opencv4",  # Path to OpenCV headers
+        "--std=c++20"
+    ],
+    linkopts = [
+        "-lopencv_core",
+        "-lopencv_highgui",
+        "-lopencv_imgproc",
+        "-lopencv_imgcodecs",
+        "-lopencv_features2d",
+        "-lopencv_calib3d",
+    ],  # Link OpenCV libraries
+    data = [
+        "//image:image",     # Reference to the config file group
+    ],
+)
